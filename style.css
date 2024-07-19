@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Brush Script MT', cursive;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #827191;
+}
+
+.box {
+    min-height: 500px;
+    width: 400px;
+    background-color: #FFFFFC;
+    border-radius: 5%;
+    margin-top: 5rem;
+}
+
+#upper-part {
+    height: 3rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+#lower-part {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+form {
+    padding-left: 1rem;
+}
+
+input {
+    height: 2rem;
+    width: 70%;
+    border: none;
+    background-color: #FFFFFC;
+    color: gray;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+.btn {
+    border: none;
+    background-color: #827191;
+    font-size: 1rem;
+    color: black;
+    border-radius: 5%;
+}
+
+.addbtn {
+    height: 2rem; 
+    width: 20%;
+}
+
+#display {
+    min-height: 300px;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+#list {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    padding-bottom: 0.5rem;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FFFFFC;
+    border: 3px solid #ccc;
+    margin-top: 0.1rem;
+}
+
+input[type=checkbox]:checked {
+    background-color: rgb(85, 166, 85);
+}
+
+label {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+}
+
+.delbtn {
+    height: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 16rem;
+    width: 25%;
+}
