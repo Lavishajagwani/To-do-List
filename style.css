@@ -12,7 +12,7 @@ body {
 }
 
 .box {
-    min-height: 500px;
+    height: 500px;
     width: 400px;
     background-color: #FFFFFC;
     border-radius: 5%;
@@ -31,13 +31,14 @@ body {
     margin-top: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    overflow-y: auto;
 }
 
 form {
     padding-left: 1rem;
 }
 
-input {
+.input[type=text] {
     height: 2rem;
     width: 70%;
     border: none;
@@ -46,7 +47,7 @@ input {
     font-size: 1rem;
 }
 
-input:focus {
+.input[type=text]:focus {
     outline: none;
     border: none;
 }
@@ -65,42 +66,92 @@ input:focus {
 }
 
 #display {
-    min-height: 300px;
+    height: 260px;
     width: 100%;
     margin-top: 2rem;
+    overflow-y: auto;
+    padding-bottom: 1rem;
 }
 
-#list {
+.list {
     list-style: none;
+    margin: 0 1rem;
 }
 
 li {
     display: flex;
     padding-bottom: 0.5rem;
+    position: relative;
+    flex-wrap: wrap;
 }
 
-input[type=checkbox] {
+input[type=checkbox]{
     appearance: none;
+    cursor: pointer;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: #FFFFFC;
-    border: 3px solid #ccc;
+    border: 2px solid grey;
     margin-top: 0.1rem;
 }
 
-input[type=checkbox]:checked {
+input[type=checkbox]:checked{
     background-color: rgb(85, 166, 85);
+    border: 3px solid var(--green);
+    border-radius: 50%;
 }
+
+input[type=checkbox]:checked::before {
+    content: "\2713";
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
 
 label {
     margin-left: 1rem;
     font-size: 1.1rem;
+    flex: 1;
+    word-break: normal;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    padding-right: 3rem;
 }
 
-.delbtn {
+label::first-letter {
+    text-transform: capitalize;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delBtn {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #FFFFFC;
+    border: 2px solid grey;
+    margin-top: 0.1rem;
+    position: absolute;
+    left: 19rem;
+    cursor: pointer;
+}
+
+#delete {
+    margin-top: 1rem;
+}
+
+.delAllbtn {
     height: 2rem;
-    margin-bottom: 2rem;
     margin-left: 16rem;
     width: 25%;
 }
