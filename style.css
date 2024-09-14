@@ -63,6 +63,7 @@ form {
 .addbtn {
     height: 2rem; 
     width: 20%;
+    cursor: pointer;
 }
 
 #display {
@@ -154,4 +155,5 @@ label::first-letter {
     height: 2rem;
     margin-left: 16rem;
     width: 25%;
+    cursor: pointer;
 }
